@@ -27,7 +27,7 @@ Make your changes to the TypeScript files in the _src_ directory.
 ## Testing
 
 ```
-karma start
+yarn watch
 ```
 
 ## Versioning
@@ -41,6 +41,8 @@ package.json
 ## Git
 
 ```
+yarn build
+yarn pages
 git add --all
 git commit -m '...'
 yarn changelog

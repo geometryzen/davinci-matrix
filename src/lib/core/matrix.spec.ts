@@ -27,4 +27,23 @@ describe("matrix", function () {
             expect(`${M.toString()}`).toBe("1, 2, 3\n4, 5, 6");
         });
     });
+    describe("__add__", function () {
+        const A = matrix([[1, 2, 3], [4, 5, 6]]);
+        const B = matrix([[2, 3, 5], [7, 11, 13]]);
+        const M = A.__add__(B);
+        it("should have correct rows", function () {
+            expect(M.rows).toBe(A.rows);
+        });
+        it("should have correct columns", function () {
+            expect(M.cols).toBe(A.cols);
+        });
+        it("should have correct elements", function () {
+            expect(M.getElement(1, 1)).toBe(3);
+            expect(M.getElement(1, 2)).toBe(5);
+            expect(M.getElement(1, 3)).toBe(8);
+            expect(M.getElement(2, 1)).toBe(11);
+            expect(M.getElement(2, 2)).toBe(16);
+            expect(M.getElement(2, 3)).toBe(19);
+        });
+    });
 });
