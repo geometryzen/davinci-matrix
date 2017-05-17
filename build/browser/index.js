@@ -25,12 +25,24 @@ function matrix(elements) {
     return m;
 }
 
+function init(rows, cols, value) {
+    var elements = [];
+    for (var i = 0; i < rows; i++) {
+        var row = [];
+        for (var j = 0; j < cols; j++) {
+            row.push(value);
+        }
+        elements.push(row);
+    }
+    return matrix(elements);
+}
+
 function ones(rows, cols) {
-    throw new Error("ones is not implemented");
+    return init(rows, cols, 1);
 }
 
 function zeros(rows, cols) {
-    throw new Error("zeros is not implemented");
+    return init(rows, cols, 0);
 }
 
 exports.matrix = matrix;

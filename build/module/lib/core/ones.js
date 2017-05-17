@@ -1,3 +1,4 @@
+import { init } from './init';
 export function ones(rows, cols) {
-    throw new Error("ones is not implemented");
+    return init(rows, cols, 1);
 }

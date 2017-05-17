@@ -1,5 +1,6 @@
 import { Matrix } from './matrix';
+import { init } from './init';
 
 export function zeros(rows: number, cols: number): Matrix {
-    throw new Error("zeros is not implemented");
+    return init(rows, cols, 0);
 }

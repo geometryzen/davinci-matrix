@@ -1,5 +1,6 @@
 import { Matrix } from './matrix';
+import { init } from './init';
 
 export function ones(rows: number, cols: number): Matrix {
-    throw new Error("ones is not implemented");
+    return init(rows, cols, 1);
 }

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var init_1 = require("./init");
 function ones(rows, cols) {
-    throw new Error("ones is not implemented");
+    return init_1.init(rows, cols, 1);
 }
 exports.ones = ones;
