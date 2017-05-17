@@ -43,7 +43,7 @@ package.json
 ```
 git add --all
 git commit -m '...'
-git tag -a 1.2.3 -m '...'
+yarn changelog
 git push origin master --tags
 npm publish
 ```

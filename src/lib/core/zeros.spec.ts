@@ -1,7 +1,7 @@
 import { zeros } from './zeros';
 
 describe("matrix", function () {
-    it("constructor", function () {
+    it("zeros", function () {
         const M = zeros(2, 3);
         expect(M.rows).toBe(2);
         expect(M.cols).toBe(3);

@@ -2,6 +2,7 @@ export interface Matrix {
     readonly rows: number;
     readonly cols: number;
     getElement(row: number, column: number): number;
+    toString(): string;
 }
 
 function computeColumns(elements: number[][]): number {
@@ -19,10 +20,15 @@ export function matrix(elements: number[][]): Matrix {
         return elements[row - 1][column - 1];
     }
 
+    function toString(): string {
+        return elements.map(function (row) { return row.join(", "); }).join("\n");
+    }
+
     const m: Matrix = {
         rows,
         cols,
-        getElement
+        getElement,
+        toString
     };
     return m;
 }
