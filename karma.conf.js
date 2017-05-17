@@ -34,7 +34,7 @@ module.exports = function (config) {
 
       'karma-test-shim.js',
 
-      { pattern: 'test/**/*.js', included: false, watched: false },
+      { pattern: 'test/**/*.js', included: false, watched: true },
 
       // Karma will load this under /base/node_modules/tslib/tslib.js
       { pattern: 'node_modules/tslib/tslib.js', included: false, watched: false },

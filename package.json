@@ -40,7 +40,7 @@
     "lint": "tslint src/**/*.ts",
     "unit": "trash test && tsc -p tsconfig.json && karma start",
     "test": "yarn lint && yarn unit && nyc check-coverage --lines 40 --functions 30 --branches 20",
-    "watch": "concurrently -r --kill-others 'tsc -p tsconfig.json -w' 'sleepms 2000 && jasmine-node test --autotest --watch test'",
+    "watch": "concurrently -r --kill-others 'tsc -p tsconfig.json -w' 'karma start'",
     "coverage": "trash test && tsc -p tsconfig.json && nyc karma start && nyc report --reporter=html && opn coverage/index.html",
     "docs": "yarn docs:typedoc && opn docs/index.html",
     "docs:typedoc": "trash docs && typedoc src/index.ts --excludePrivate --excludeNotExported --mode file --theme minimal --out docs",

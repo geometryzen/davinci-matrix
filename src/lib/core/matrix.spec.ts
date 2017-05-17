@@ -23,7 +23,8 @@ describe("matrix", function () {
         const elements = [[1, 2, 3], [4, 5, 6]];
         const M = matrix(elements);
         it("should be comma-space delimited on columns and newline on rows", function () {
-            expect(`${M}`).toBe("1, 2, 3\n4, 5, 6");
+            expect(typeof M.toString()).toBe('string');
+            expect(`${M.toString()}`).toBe("1, 2, 3\n4, 5, 6");
         });
     });
 });
