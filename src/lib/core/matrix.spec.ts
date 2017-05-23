@@ -2,10 +2,10 @@ import { matrix } from './matrix';
 
 describe("matrix", function () {
     describe("constructor", function () {
-        const elements = [[1, 2, 3], [4, 5, 6]];
+        const elements = [[1, 2, 3], [4, 5, 6], [7,8,9]];
         const M = matrix(elements);
         it("should have correct rows", function () {
-            expect(M.rows).toBe(2);
+            expect(M.rows).toBe(3);
         });
         it("should have correct columns", function () {
             expect(M.cols).toBe(3);
